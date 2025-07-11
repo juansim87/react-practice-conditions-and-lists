@@ -1,9 +1,8 @@
 // import { useState } from "react";
 import "./NameList.css";
 
-const names = ["Ana", "Luis", "Clara", "Sergio", "Marta"];
-
 export const NameList = () => {
+  const names = ["Ana", "Luis", "Clara", "Sergio", "Marta"];
   return (
     <div>
       <h2>Lista de nombres</h2>
