@@ -18,6 +18,7 @@ export const TaskList = () => {
 
   return (
     <div className="taskList">
+    <h2>Lista de tareas</h2>
       <ul>
         {tasks.map((item) => {
           const isCompleted = completed.includes(item.id);
