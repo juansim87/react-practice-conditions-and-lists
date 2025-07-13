@@ -36,7 +36,7 @@ export const AddFruitForm = () => {
   return (
     <div>
       <h2>Lista de frutas</h2>
-      <form action="form">
+      <form action="#">
         <select value={selectedFruit} onChange={handleInputChange}>
           <option value="">Selecciona una fruta</option>
           {Object.entries(fruits).map(([value, label]) => (
