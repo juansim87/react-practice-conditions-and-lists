@@ -1,0 +1,14 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.active { color: green;}
+.inactive {color: red;}

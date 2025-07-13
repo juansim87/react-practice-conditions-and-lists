@@ -6,6 +6,7 @@ import { NameList } from './components/NameList/NameList'
 import { ProductList } from './components/ProductList/ProductList'
 import { RemoveItemList } from './components/RemoveItemList/RemoveItemList'
 import { TaskList } from './components/TaskList/TaskList'
+import { ToggleItemsList } from './components/ToggleItemsList/ToggleItemsList'
 
 function App() {
  
@@ -19,6 +20,7 @@ function App() {
      <AddFruitForm/>
      <RemoveItemList/>
      <DynamicShoppingList/>
+     <ToggleItemsList/>
     </>
   )
 }
