@@ -28,10 +28,10 @@ export const ScoreBoard = () => {
     <div>
       <h2>Tabla de puntuaciones</h2>
       <ul>
-        {sortedClassification.map((player) => (
+        {sortedClassification.map((player, index) => (
           <li key={player.id}>
             <span>
-              {player.name} || {player.score} puntos
+              {index + 1}ª posición —{player.name} || {player.score} puntos
             </span>
             <span>
               <button onClick={() => handleAddPoint(player.id)}>+1</button>
