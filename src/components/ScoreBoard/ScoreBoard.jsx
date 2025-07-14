@@ -18,8 +18,6 @@ export const ScoreBoard = () => {
         player.id === id ? { ...player, score: player.score + 1 } : player
       )
     );
-
-    
   };
 
   const sortedClassification = classification.sort((a, b) => b.score - a.score);
