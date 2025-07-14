@@ -12,19 +12,23 @@ export const ScoreBoard = () => {
 
   const [classification, setClassification] = useState(sortedPlayers);
 
-  const handleAddPoint = () => {
+  const handleAddPoint = (id) => {
     setClassification((prevClassification) =>
-      prevClassification.map((player, id) =>
+      prevClassification.map((player) =>
         player.id === id ? { ...player, score: player.score + 1 } : player
       )
     );
+
+    
   };
+
+  const sortedClassification = classification.sort((a, b) => b.score - a.score);
 
   return (
     <div>
       <h2>Tabla de puntuaciones</h2>
       <ul>
-        {classification.map((player) => (
+        {sortedClassification.map((player) => (
           <li key={player.id}>
             <span>
               {player.name} || {player.score} puntos
