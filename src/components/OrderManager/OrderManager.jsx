@@ -14,23 +14,22 @@ export const OrderManager = () => {
   const [completedOrders, setCompletedOrders] = useState([]);
 
   const onComplete = (id) => {
-    console.log("Pedido completado", id);
+    // console.log("Pedido completado", id);
 
-    const orderFound = pendingOrders.find((element)=> element.id === id);
+    const orderFound = pendingOrders.find((element) => element.id === id);
 
-    console.log("Pedido completado:", orderFound);
+    // console.log("Pedido completado:", orderFound);
 
     if (!orderFound) {
-        return;
+      return;
     }
 
-    const ordersFiltered = pendingOrders.filter((element) => element.id !== id)
+    const ordersFiltered = pendingOrders.filter((element) => element.id !== id);
     console.log("Pedidos filtrados:", ordersFiltered);
 
     setPendingOrders(ordersFiltered);
     setCompletedOrders((prev) => [...prev, orderFound]);
-
-  }
+  };
 
   return (
     <div>
@@ -44,7 +43,7 @@ export const OrderManager = () => {
               {product.product} - Precio: {product.price}€
             </span>
             <span>
-                <button onClick={() => onComplete(product.id)}>Completar</button>
+              <button onClick={() => onComplete(product.id)}>Completar</button>
             </span>
           </li>
         ))}
