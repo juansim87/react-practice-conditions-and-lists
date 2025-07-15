@@ -1,15 +1,24 @@
 .pizza-orders {
-  font-family: sans-serif;
-  background-color: #fff8f0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fff0e0, #ffe5d1);
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 2rem auto;
 }
 
 .pizza-orders h2 {
   text-align: center;
+  color: #d35400;
   margin-bottom: 2rem;
-  color: #e74c3c;
+  font-size: 2rem;
+}
+
+.pizza-orders h3 {
+  color: #b03a2e;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
 .pizza-orders section {
@@ -18,25 +27,27 @@
 
 .pizza-orders select,
 .pizza-orders input[type="number"] {
-  padding: 0.5rem;
+  padding: 0.6rem;
   margin-right: 0.5rem;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid #ccc;
   font-size: 1rem;
+  background-color: #fffefb;
 }
 
 .pizza-orders button {
   padding: 0.5rem 1rem;
-  background-color: #27ae60;
+  background-color: #e74c3c;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .pizza-orders button:hover {
-  background-color: #219150;
+  background-color: #c0392b;
 }
 
 .pizza-orders ul {
@@ -48,15 +59,34 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fafafa;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
-  margin-bottom: 0.5rem;
+  background-color: #fffaf5;
+  border: 1px solid #f5cba7;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+.pizza-orders li span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pizza-orders li span:first-child::before {
+  content: "🍕";
+}
+
+.pizza-orders li span:last-child button::before {
+  content: "✅ ";
 }
 
 .pizza-orders p {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #333;
+  color: #2d3436;
+  background-color: #fef5e7;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border-left: 6px solid #e67e22;
 }
