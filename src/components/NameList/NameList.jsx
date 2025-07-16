@@ -7,8 +7,8 @@ export const NameList = () => {
     <div>
       <h2>Lista de nombres</h2>
       <ul>
-        {names.map((student) => {
-          return <li key={`${Date.now()}-${student}`}>{student}</li>;
+        {names.map((student, index) => {
+          return <li key={`${index}-${student}`}>{student}</li>;
         })}
       </ul>
     </div>

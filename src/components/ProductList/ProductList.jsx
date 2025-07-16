@@ -14,7 +14,7 @@ export const ProductList = () => {
       <div className="product-cards">
         {products.map((item) => {
           return (
-            <div key={`${Date.now()}-${item.id}`} className="card">
+            <div key={item.id} className="card">
               <h3>{item.name}</h3>
               <p>Precio: {item.price}</p>
             </div>
